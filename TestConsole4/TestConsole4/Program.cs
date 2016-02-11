@@ -10,7 +10,20 @@ namespace TestConsole4
     {
         static void Main(string[] args)
         {
-
+            float pi = 3.14159265359F;
+            float r;
+            Console.WriteLine("Napiš poloměr kružnice/kruhu: (v cm)");
+            bool f = float.TryParse(Console.ReadLine(), out r);
+            float obv = 2 * pi * r;
+            double obs = pi * (r * r);
+            Console.WriteLine();
+            if (f == !false)
+            {
+                Console.WriteLine("Obvod kružnice/kruhu je: " + obv + " cm.");
+                Console.WriteLine("Obsah kruhu je: " + obs + " cm2.");
+            }
+            else { Console.WriteLine("Kalkulačka neumí počítat s textem! Restartujte aplikaci."); }
+            Console.ReadKey();
         }
     }
 }
