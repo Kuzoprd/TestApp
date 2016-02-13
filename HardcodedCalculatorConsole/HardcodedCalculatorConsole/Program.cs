@@ -86,6 +86,7 @@ namespace HardcodedCalculatorConsole
                             fpok = true;
                             break;
                         default:
+                            Console.WriteLine();
                             Console.WriteLine(err3);
                             break;
                     }
