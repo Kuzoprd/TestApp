@@ -17,7 +17,6 @@ namespace HardcodedCalculatorConsole
 
             float pc;
             float dc;
-            char met;
             double vys = 0;
                 // Vždy před *while* vyvrátit nebo potvrdit, ve *while* s tím něco provést
             bool fmet; // Funguje metoda (chybová odpověď)
@@ -40,10 +39,8 @@ namespace HardcodedCalculatorConsole
                 fmet = false;
                 while (!fmet)
                 {
-                    met = Console.ReadKey().KeyChar; // Zadání metody
-                    Console.WriteLine();
                     fmet = true;
-                    switch (met)
+                    switch (Console.ReadKey().KeyChar) // Zadání metody
                     {
                         case '1':
                             vys = pc + dc;
@@ -66,6 +63,7 @@ namespace HardcodedCalculatorConsole
                             fmet = false; // Špatná metoda
                             break;
                     }
+                    Console.WriteLine();
                 if (fmet)
                     Console.WriteLine("Výsledek je: {0}", vys);
                 else
